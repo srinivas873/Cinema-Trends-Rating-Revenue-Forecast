@@ -1,152 +1,152 @@
-**🎥 Movie Rating and Revenue Prediction**
+# 🎬 Cinema-Trends-Rating-Revenue-Forecast
 
-**🌟 Overview**
+## 📌 Overview
+This project leverages **machine learning** to predict **movie ratings and revenues** using datasets from **IMDB** and **TMDB**. We implemented **Random Forest Regressor, XGBoost, and Neural Networks** to analyze and predict the success of movies before their release. The project includes a **web-based interactive interface** to input movie details and view predictions.
 
-Unlock the power of data to predict movie success! This project leverages machine learning and data science to forecast movie ratings and revenues, utilizing comprehensive datasets from IMDB and TMDB. It showcases data-driven insights and predictive analytics tailored for the entertainment industry.
+## 🚀 Features
+- **Predicts movie ratings and revenues** using machine learning models.
+- **Uses IMDB and TMDB datasets** for feature extraction.
+- **Implements three ML models**: 
+  - Random Forest Regressor
+  - XGBoost
+  - Neural Networks
+- **Web interface for user interaction** and prediction visualization.
 
-**✨ Highlights**
+---
 
-Sophisticated Data Preprocessing to clean and transform raw datasets.
+## 💂️ Dataset and Features
+We used two primary datasets:
 
-State-of-the-art Models: Random Forest, XGBoost, and Neural Networks.
+1. **IMDB Dataset**: Contains movie reviews and sentiment data.
+2. **TMDB Dataset**: Includes metadata such as budget, genre, popularity, and revenue.
 
-Interactive User Interface: Easy-to-use interface for predictions and visualizations.
+### **Key Features Used**
+- 🎭 **Genres**
+- 🎬 **Cast**
+- 💰 **Budget**
+- 📅 **Release Date**
+- 🎢 **Popularity**
+- 🎥 **Director**
+- ⭐ **IMDB Ratings**
+- 💵 **Revenue**
 
-**🚀 Features**
+---
 
-**1️⃣ Data Preprocessing:**
+## ⚙️ Installation
 
-Cleaned and transformed IMDB and TMDB datasets.
+### **1️⃣ Clone the Repository**
+```bash
+git clone https://github.com/yourusername/Movie-Rating-Revenue-Prediction.git
+cd Movie-Rating-Revenue-Prediction
+```
 
-Categorical encoding, missing value handling, and feature standardization.
+### **2️⃣ Create a Virtual Environment**
+```bash
+python -m venv env
+source env/bin/activate    # For MacOS/Linux
+env\Scripts\activate       # For Windows
+```
 
-**2️⃣ Predictive Models:**
-
-Random Forest: High accuracy and interpretability.
-
-XGBoost: Performance-driven with gradient boosting.
-
-Neural Networks: Exploring deep learning for complex patterns.
-
-**3️⃣ User Interface:**
-
-Intuitive input form for movie attributes like genre, budget, and cast.
-
-Real-time visualizations of predictions with confidence intervals.
-
-**📊 Dataset Details**
-
-IMDB Dataset: Movie reviews and sentiments.
-
-TMDB Dataset: Metadata such as budget, popularity, genres, and revenues.
-
-Key Features Utilized:
-
-Genre, cast details, budget, and release date.
-
-Data Splits:
-
-Training Set: 80%
-
-Testing Set: 20%
-
-**🏆 Results**
-
-**🔹 Random Forest**
-
-Rating Prediction:
-
-MAE: 0.5766
-
-RMSE: 0.7784
-
-R²: 0.5103
-
-Revenue Prediction:
-
-MAE: $41,451,530.36
-
-RMSE: $87,075,235.39
-
-R²: 0.7149
-
-**🔹 XGBoost**
-
-Rating Prediction:
-
-MAE: 0.6059
-
-RMSE: 0.8214
-
-R²: 0.4548
-
-Revenue Prediction:
-
-MAE: $43,537,141.60
-
-RMSE: $102,737,035.74
-
-R²: 0.6031
-
-**🔹 Neural Networks**
-
-Revenue Prediction:
-
-MAE: $56,717,634.53
-
-RMSE: $101,658,689.38
-
-R²: 0.6114
-
-**🛠️ How to Run**
-
-Prerequisites
-
-Python 3.x
-
-Install dependencies:
-
+### **3️⃣ Install Dependencies**
+```bash
 pip install -r requirements.txt
+```
 
-Steps
+### **4️⃣ Download the Dataset**
+- Download **IMDB and TMDB** datasets from:
+  - [IMDB Dataset](https://www.imdb.com/interfaces/)
+  - [TMDB Dataset](https://www.kaggle.com/tmdb/tmdb-movie-metadata)
+- Place them in the `data/` folder.
 
-Clone the repository:
+---
 
-git clone https://github.com/<your-username>/Movie-Rating-and-Revenue-Prediction.git
+## 🏢 Model Training
 
-Navigate to the project directory:
+### **1️⃣ Preprocess Data**
+```bash
+python preprocess.py
+```
 
-cd Movie-Rating-and-Revenue-Prediction
+### **2️⃣ Train Models**
+```bash
+python train.py
+```
 
-Run scripts for data preprocessing, model training, and predictions.
+### **3️⃣ Evaluate Models**
+```bash
+python evaluate.py
+```
 
-Launch the user interface to interact with prediction models.
+### **4️⃣ Run Web Interface**
+```bash
+streamlit run app.py
+```
 
-**📈 Visualizations**
+---
 
-Class Diagram: An architectural overview of the project.
+## 📊 Results & Model Performance
 
+### **🔹 Random Forest Regressor**
+| Metric | Ratings Model | Revenue Model |
+|--------|--------------|--------------|
+| MAE    | 0.5766       | $41.4M       |
+| RMSE   | 0.7784       | $87.0M       |
+| R²     | 0.5103       | 0.7149       |
 
-Prediction Results: Interactive charts displaying feature importance and prediction intervals.
+### **🔹 XGBoost**
+| Metric | Ratings Model | Revenue Model |
+|--------|--------------|--------------|
+| MAE    | 0.6059       | $43.5M       |
+| RMSE   | 0.8214       | $102.7M      |
+| R²     | 0.4548       | 0.6031       |
 
-**🚧 Future Work**
+### **🔹 Neural Networks**
+| Metric | Ratings Model | Revenue Model |
+|--------|--------------|--------------|
+| MAE    | 396,270.53   | $56.7M       |
+| RMSE   | 676,133.98   | $101.6M      |
+| R²     | -369M        | 0.6114       |
 
-Add social media trends and critic reviews for richer datasets.
+📌 **Conclusion:**  
+- **Random Forest performed the best** for revenue predictions.
+- **XGBoost had moderate success** but requires tuning.
+- **Neural Networks underperformed** due to overfitting.
 
-Enhance neural network performance with advanced architectures.
+---
 
-Expand visualizations for greater interpretability.
+## 🎨 Web Interface
+The project includes a **Streamlit-based UI** for user-friendly predictions.
 
-**💼 Skills Demonstrated**
+### **🔹 Features**
+- **📅 Input movie details** (genre, cast, budget, release date).
+- **📊 Display predicted rating and revenue**.
+- **💡 Visualize feature importance and prediction confidence intervals**.
 
-Machine Learning: Expertise with Random Forest, XGBoost, and Neural Networks.
+To run the web interface:
+```bash
+streamlit run app.py
+```
 
-Data Preprocessing: Cleaning, encoding, and feature scaling.
+---
 
-Software Development: API integration, modular design, and project organization.
+## 🔮 Future Enhancements
+- **🔗 Incorporate social media trends** for better predictions.
+- **🎬 Use critic reviews** as an additional feature.
+- **🤖 Improve Neural Network models** with deep learning techniques.
+- **🛠️ Deploy as a cloud-based API** for broader accessibility.
 
-Data Visualization: Insightful, interactive charts and diagrams.
+---
+
+## 📜 References
+1. Ahmad, I. S., Bakar, A. A., Yaakub, M. R., & Muhammad, S. H. (2020). A survey on machine learning techniques in movie revenue prediction. *SN Computer Science, 1(4), 235*.
+2. Chakraborty, P., Zahidur, M., & Rahman, S. (2019). Movie success prediction using historical and current data mining. *International Journal of Computer Applications, 178(47), 1-5*.
+
 
 
 Showcasing my passion for data science, predictive analytics, and innovative problem-solving. Let’s collaborate and create something impactful together! 💡
+---
 
+## 📬 Contact
+📧 Email: srinivasnarayanaramm@email.com  
+🔗 GitHub: https://github.com/srinivas873 
+🔗 LinkedIn: https://www.linkedin.com/feed/
